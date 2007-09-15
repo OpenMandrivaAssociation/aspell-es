@@ -27,7 +27,7 @@ Requires:      aspell >= %{aspell_ver}
 
 BuildRequires: locales-es
 
-# Mandrake Stuff
+# Mandriva Stuff
 Requires:      locales-%{languagecode}
 Provides:      aspell-dictionary spell-es
 
