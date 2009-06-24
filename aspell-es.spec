@@ -16,11 +16,11 @@
 Summary:       %{languageenglazy} files for aspell
 Name:          aspell-%{languagecode}
 Version:       1.9a.1
-Release:       %mkrel 1
+Release:       %mkrel 2
 Group:         System/Internationalization
 Source:        http://ftp.gnu.org/gnu/aspell/dict/%{languagecode}/%{fname}-%{src_ver}.tar.bz2
 URL:           http://aspell.sourceforge.net/
-License:       GPL
+License:       GPLv2
 BuildRoot:     %{_tmppath}/%{name}-%{version}-root
 BuildRequires: aspell >= %{aspell_ver}
 Requires:      aspell >= %{aspell_ver}
