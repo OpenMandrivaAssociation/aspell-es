@@ -5,7 +5,7 @@
 # To build this package, you may have to set LANG to es
 # example : LANG=es; rpm -ba aspell-es.spec
 
-%define src_ver 1.9a-1
+%define src_ver 1.11-2
 %define fname aspell6-%{languagecode}
 %define aspell_ver 0.60
 %define languagelocal espanol
@@ -15,8 +15,8 @@
 
 Summary:       %{languageenglazy} files for aspell
 Name:          aspell-%{languagecode}
-Version:       1.9a.1
-Release:       %mkrel 5
+Version:       1.11.2
+Release:       %mkrel 1
 Group:         System/Internationalization
 Source:        http://ftp.gnu.org/gnu/aspell/dict/%{languagecode}/%{fname}-%{src_ver}.tar.bz2
 URL:           http://aspell.sourceforge.net/
@@ -52,7 +52,7 @@ export LANG=es
 %make
 
 %install
-rm -fr $RPM_BUILD_ROOT
+rm -fr %{buildroot}
 export LANG=es
 
 %makeinstall_std
@@ -60,11 +60,10 @@ export LANG=es
 chmod 644 README Copyright
 
 %clean
-rm -fr $RPM_BUILD_ROOT
+rm -fr %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc README Copyright
 %{_libdir}/aspell-%{aspell_ver}/*
-
 
